@@ -11,6 +11,10 @@ namespace DAL.Services.SortinAndSearching
     {
         private readonly AppDbContext appDbContext;
 
+        public SortingAndSearching()
+        {
+        }
+
         public SortingAndSearching(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
