@@ -1,0 +1,17 @@
+﻿@model int 
+<div class="row">
+    <<div class="col-md-6 offset-3 alert alert-success text-center">
+        @if (Model > 0)
+        {
+            <h2>@Model rows were added successfully to database</h2>
+        }
+        else
+        {
+            <h2>Entity was empty</h2>
+        }
+        <p>You can check all items in home page. Please visit to hame page</p>
+        <p>Thank you!</p>
+        <hr />
+         <a class="btn btn-outline-primary"  asp-controller="Home" asp-action="Index">Home Page</a>
+    </div>
+</div>

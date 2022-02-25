@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Csv_Parser</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="col-sm-12 col-md-4">
+                    <form asp-controller="Home"  asp-action ="AddingCsvFile" enctype="multipart/form-data" method="POST">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" name="csv_file"  class="custom-file-input" id="inputGroupFile04">
+                                <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Import</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <b> Sort By Asc</b>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByAsc" asp-route-value="PayrollNumber" >PayrollNumber</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByAsc" asp-route-value="Forenames">Forenames </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByAsc" asp-route-value="DateOfBirth">DateOfBirth </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByAsc" asp-route-value="Telephone">Telephone </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByAsc" asp-route-value="EmailHome">EmailHome </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <b> Sort By Desc</b>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByDesc" asp-route-value="PayrollNumber" >PayrollNumber</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByDesc" asp-route-value="Forenames">Forenames </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByDesc" asp-route-value="DateOfBirth">DateOfBirth </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByDesc" asp-route-value="Telephone">Telephone </a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="SortByDesc" asp-route-value="EmailHome">EmailHome </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+             
+                <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="Searching" style="padding-right: 25px;">
+                    <input name="searchString" type="text" class="form-control" placeholder="Search for a book ...." /><span style="padding:2px"></span>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i>Search</button>
+                </form>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

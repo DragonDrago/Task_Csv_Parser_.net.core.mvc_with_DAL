@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csv_Parser", "Csv_Parser.csproj", "{728B6FC1-A64C-4CEA-AC96-C9DA24EEF1AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{9944B032-CC01-4AF5-933C-B02FF7CA9156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{728B6FC1-A64C-4CEA-AC96-C9DA24EEF1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728B6FC1-A64C-4CEA-AC96-C9DA24EEF1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728B6FC1-A64C-4CEA-AC96-C9DA24EEF1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728B6FC1-A64C-4CEA-AC96-C9DA24EEF1AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9944B032-CC01-4AF5-933C-B02FF7CA9156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9944B032-CC01-4AF5-933C-B02FF7CA9156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9944B032-CC01-4AF5-933C-B02FF7CA9156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9944B032-CC01-4AF5-933C-B02FF7CA9156}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90D18ED4-6A12-470F-8D03-A4D14C7676EE}
+	EndGlobalSection
+EndGlobal
